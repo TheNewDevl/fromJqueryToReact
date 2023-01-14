@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently -k -n \"Client,Storybook\" -p\"[{name}]\" -c \"blue,red\" \"npm run dev --workspace=client\" \"npm run dev --workspace=packages\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "workspaces": [
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/TheNewDevl/fromJqueryToReact/issues"
   },
-  "homepage": "https://github.com/TheNewDevl/fromJqueryToReact#readme"
+  "homepage": "https://github.com/TheNewDevl/fromJqueryToReact#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
 }

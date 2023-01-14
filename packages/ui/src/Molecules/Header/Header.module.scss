@@ -1,0 +1,26 @@
+.Header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  & h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  & .coloredSpan {
+    color: #498f35;
+  }
+  & .logoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    justify-self: center;
+    & img {
+      width: 100%;
+    }
+  }
+
+}
+
+/** Created by carlos on 13/01/2023 */

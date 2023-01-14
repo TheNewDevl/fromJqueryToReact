@@ -1,0 +1,14 @@
+.Link {
+  font-weight: 700;
+  background-color: #498f35;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  transition: 300ms background-color ease-in-out;
+  width: fit-content;
+  &:hover {
+    background-color: lighten(#498f35, 10%);
+  }
+}
+
+/** Created by carlos on 13/01/2023 */
