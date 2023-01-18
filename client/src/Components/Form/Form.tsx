@@ -1,5 +1,5 @@
-import { Button, DatesPicker, FormContainer, Input } from "@fromjquerytoreact/ui";
-import { ChangeEvent, useState, MouseEvent } from "react";
+import { Button, DatesPicker, FormContainer, Input, ModalComponent } from "@fromjquerytoreact/ui";
+import { ChangeEvent, MouseEvent, useState } from "react";
 import { states } from "./states";
 import { inputsList } from "./inputsList";
 import { departmentsList } from "./departmentsList";
@@ -21,7 +21,8 @@ export const Form = () => {
     dateOfBirth: "",
     startDate: "",
   } as Employee);
-
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [modalText, setModalText] = useState<string>("");
   const { firstInputs, addressInputs, department } = inputsList(employee);
 
   // Employee state handlers
@@ -34,6 +35,8 @@ export const Form = () => {
   const handleSubmit = (e: MouseEvent) => {
     e.preventDefault();
     console.log(employee);
+    setModalText("Employee created successfully");
+    setIsModalOpen(true);
   };
 
   return (
@@ -54,6 +57,7 @@ export const Form = () => {
       </fieldset>
       <Input {...department} list={departmentsList} onChange={handleEmployeeChange} />
       <Button onClick={handleSubmit} children={"SAVE"} />
+      <ModalComponent setIsOpenModal={setIsModalOpen} isOpenModal={isModalOpen} text={modalText} />
     </FormContainer>
   );
 };

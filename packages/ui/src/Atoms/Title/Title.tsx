@@ -3,12 +3,12 @@ import { ReactNode } from "react";
 interface TitleProps {
   level?: "1" | "2" | "3" | "4" | "5" | "6";
   children: ReactNode;
-  size?: string;
+  fontSize?: string;
   margin?: number | string;
   padding?: number | string;
   color?: string;
   fontWeight?: string;
-  mb?: string;
+  marginBottom?: string;
   textAlign?: "center" | "left" | "right";
 }
 

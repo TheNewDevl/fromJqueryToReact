@@ -8,3 +8,4 @@ export { FormContainer } from "./Molecules/Form/FormContainer";
 export { DatesPicker } from "./Atoms/DatesPicker/DatesPicker";
 export { Button } from "./Atoms/Button/Button";
 export { subYears } from "date-fns";
+export { ModalComponent } from "./Molecules/ModalComponent/ModalComponent";
