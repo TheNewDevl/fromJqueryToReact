@@ -1,14 +1,13 @@
-.Link {
-  font-weight: 700;
+.buttons{
   background-color: #498f35;
   color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
   transition: 300ms background-color ease-in-out;
-  width: fit-content;
+  border: 1px solid #fff;
   &:hover {
     background-color: lighten(#498f35, 10%);
   }
 }
 
-/** Created by carlos on 13/01/2023 */
+/** Created by carlos on 14/01/2023 */
