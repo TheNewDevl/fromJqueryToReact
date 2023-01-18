@@ -1,4 +1,3 @@
-import style from "./Link.module.scss";
 import { Link as RouterLink } from "react-router-dom";
 import { CSSProperties, ReactNode } from "react";
 
@@ -17,7 +16,7 @@ interface LinkProps {
  */
 export const Link = ({ path, children, styles }: LinkProps) => {
   return (
-    <RouterLink style={{ ...styles }} to={path} className={style.Link}>
+    <RouterLink style={{ padding: "0.5rem 1rem", width: "fit-content", ...styles }} to={path}>
       {children && children}
     </RouterLink>
   );

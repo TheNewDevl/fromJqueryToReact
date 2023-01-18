@@ -17,3 +17,15 @@ body{
   margin: auto;
   padding: 1rem;
 }
+
+button, a{
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #498f35;
+  color: #fff;
+  border-radius: 15px;
+  transition: 300ms background-color ease-in-out;
+  &:hover {
+    background-color: lighten(#498f35, 10%);
+  }
+}

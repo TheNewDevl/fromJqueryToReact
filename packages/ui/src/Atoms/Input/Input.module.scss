@@ -1,0 +1,26 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  & label {
+    font-weight: bold;
+    color: #fff;
+  }
+
+  & input, & select {
+    margin-top: 10px;
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    border: 1px solid #498f35;
+    border-radius: 15px;
+    background-color: #ebfcea;
+    &::placeholder {
+      color: #bebebe;
+    }
+  }
+}
+
+
+/** Created by carlos on 10/01/2023 */
+/** Created by carlos on 14/01/2023 */

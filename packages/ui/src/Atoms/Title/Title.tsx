@@ -9,6 +9,7 @@ interface TitleProps {
   color?: string;
   fontWeight?: string;
   mb?: string;
+  textAlign?: "center" | "left" | "right";
 }
 
 /**
