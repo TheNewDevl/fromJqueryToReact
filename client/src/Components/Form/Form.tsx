@@ -1,8 +1,9 @@
 import { Button, DatesPicker, FormContainer, Input, ModalComponent } from "@fromjquerytoreact/ui";
-import { ChangeEvent, MouseEvent, useState } from "react";
+import { ChangeEvent, MouseEvent, useContext, useState } from "react";
 import { states } from "./states";
 import { inputsList } from "./inputsList";
 import { departmentsList } from "./departmentsList";
+import { EmployeesContext } from "../../context/EmployeesContext";
 
 export interface Employee {
   firstName: string;
@@ -32,9 +33,13 @@ export const Form = () => {
   };
   const dateHandlers = (type: string, date: Date) => setEmployee({ ...employee, [type]: date });
 
+  // Get the updated employee list function from the context
+  const { updateEmployeesList } = useContext(EmployeesContext);
+
   const handleSubmit = (e: MouseEvent) => {
     e.preventDefault();
     console.log(employee);
+    updateEmployeesList(employee);
     setModalText("Employee created successfully");
     setIsModalOpen(true);
   };
