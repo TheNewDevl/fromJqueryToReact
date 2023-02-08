@@ -1,11 +1,10 @@
 import { createContext, useState } from "react";
 import { Employee, EmployeesContextType } from "../utils/types";
-import { mockEmployees } from "../utils/mocks";
 
 export const EmployeesContext = createContext<EmployeesContextType>({} as EmployeesContextType);
 
 export const EmployeesProvider = ({ children }: any) => {
-  const [employees, setEmployees] = useState(mockEmployees);
+  const [employees, setEmployees] = useState<Employee[]>([]);
 
   const updateEmployeesList = (employee: Employee) => {
     setEmployees([...employees, employee]);
