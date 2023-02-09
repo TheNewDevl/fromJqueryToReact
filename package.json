@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently -k -n \"Client,Storybook\" -p\"[{name}]\" -c \"blue,red\" \"npm run dev --workspace=new-version-react\" \"npm run dev --workspace=packages\"",
+    "dev": "concurrently -k -n \"Client,Storybook\" -p\"[{name}]\" -c \"blue,red\" \"npm run dev --workspace=apps/new-version-react\" \"npm run dev --workspace=packages\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "workspaces": [
-    "new-version-react",
+    "apps/new-version-react",
     "packages/*"
   ],
   "repository": {
