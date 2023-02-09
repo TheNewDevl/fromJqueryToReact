@@ -21,7 +21,12 @@ export const Employees = () => {
 
   return (
     <div className={style.Employees}>
-      <DataTable data={employees.length > 0 ? employees : mockEmployees} columns={columns} />
+      <DataTable
+        data={employees.length > 0 ? employees : mockEmployees}
+        columns={columns}
+        paginationWrapperClassName={style.tableButtonsColor}
+        wrapperClassName={style.table}
+      />
     </div>
   );
 };

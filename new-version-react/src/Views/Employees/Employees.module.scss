@@ -1,0 +1,24 @@
+.tableButtonsColor div button {
+  background-color: #5cb443;
+  &:hover {
+    background-color: #498f35;
+  }
+  &[disabled] {
+    background-color: #ccc;
+    cursor: unset;
+  }
+}
+.table{
+  & [class^='tfoot-container']  {
+    background-color: #c1ffb5;
+  }
+  & table{
+    & th{
+      background-color: #c1ffb5;
+    }
+    & tr:nth-child(even) {
+      background-color: #e7ffe4;
+    }
+  }
+}
+/** Created by carlos on 13/01/2023 */
