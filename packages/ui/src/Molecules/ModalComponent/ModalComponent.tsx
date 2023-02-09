@@ -30,7 +30,7 @@ export const ModalComponent = ({ isOpenModal, setIsOpenModal, text }: ModalCompo
       contentLabel="Form modal"
     >
       <Title children={text} fontSize={"1.5rem"} marginBottom={"1rem"} textAlign={"center"} color={"#498f35"} />
-      <Button onClick={() => setIsOpenModal(false)}>close</Button>
+      <Button onClick={() => setIsOpenModal(false)}>Close</Button>
     </Modal>
   );
 };
