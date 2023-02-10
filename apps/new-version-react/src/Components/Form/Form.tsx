@@ -19,6 +19,13 @@ export interface Employee {
 
 export const Form = () => {
   const [employee, setEmployee] = useState<Employee>({
+    firstName: "",
+    lastName: "",
+    department: "",
+    street: "",
+    city: "",
+    state: "",
+    zipCode: 0,
     dateOfBirth: "",
     startDate: "",
   } as Employee);
